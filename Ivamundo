@@ -1,0 +1,21 @@
+import random
+
+vitorias = 0
+
+for i in range(200):
+    resultado_a = 1
+    resultado_b = 0
+
+    for i in range(200):
+        if random.random() < 0.5:  # random.randint(0, 100) < 50
+            resultado_a += 1
+        else:
+            resultado_b += 1
+
+        if resultado_a == 3:
+            vitorias += 1
+            break
+        elif resultado_b == 3:
+            break
+
+print("A ganhou",  vitorias, "/200")
